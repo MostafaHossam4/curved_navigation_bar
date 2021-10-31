@@ -101,7 +101,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         alignment: Alignment.bottomCenter,
         children: <Widget>[
           Positioned(
-            bottom: -40,
+            bottom: -40 - (75.0 - widget.height),
             left: Directionality.of(context) == TextDirection.rtl
                 ? null
                 : _pos * size.width,
@@ -129,20 +129,19 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           Positioned(
             left: 0,
             right: 0,
-            bottom: 0,
+            bottom: 0 - (75.0 - widget.height),
             child: CustomPaint(
               painter: NavCustomPainter(
                   _pos, _length, widget.color, Directionality.of(context)),
               child: Container(
                 height: 75.0,
-                color: Colors.red,
               ),
             ),
           ),
           Positioned(
             left: 0,
             right: 0,
-            bottom: 10,
+            bottom: 0 - (75.0 - widget.height),
             child: SizedBox(
                 height: 100.0,
                 child: Row(
@@ -152,8 +151,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                     position: _pos,
                     length: _length,
                     index: widget.items.indexOf(item),
-                    child: Container(
-                        color: Colors.redAccent, child: Center(child: item)),
+                    child: Center(child: item),
                   );
                 }).toList())),
           ),
