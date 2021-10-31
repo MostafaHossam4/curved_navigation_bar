@@ -141,7 +141,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           Positioned(
             left: 0,
             right: 0,
-            bottom: 0 - (75.0 - widget.height),
+            bottom: 10,
             child: SizedBox(
                 height: 100.0,
                 child: Row(
