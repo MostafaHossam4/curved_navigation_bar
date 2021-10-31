@@ -135,13 +135,14 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                   _pos, _length, widget.color, Directionality.of(context)),
               child: Container(
                 height: 75.0,
+                color: Colors.red,
               ),
             ),
           ),
           Positioned(
             left: 0,
             right: 0,
-            bottom: 0 - (75.0 - widget.height),
+            bottom: 10,
             child: SizedBox(
                 height: 100.0,
                 child: Row(
@@ -151,7 +152,8 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
                     position: _pos,
                     length: _length,
                     index: widget.items.indexOf(item),
-                    child: Center(child: item),
+                    child: Container(
+                        color: Colors.redAccent, child: Center(child: item)),
                   );
                 }).toList())),
           ),
