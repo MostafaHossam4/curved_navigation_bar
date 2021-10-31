@@ -101,7 +101,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         alignment: Alignment.bottomCenter,
         children: <Widget>[
           Positioned(
-            bottom: -40 - (75.0 - widget.height),
+            bottom: 10,
             left: Directionality.of(context) == TextDirection.rtl
                 ? null
                 : _pos * size.width,
